@@ -7,7 +7,7 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/telemetry');
+        const response = await fetch('https://transformer-api-oj68.onrender.com');
         const data = await response.json();
         setTelemetry(data.reverse());
       } catch (error) {
