@@ -55,7 +55,7 @@ def run_simulation():
                 
                 # Send the data to the FastAPI backend
                 try:
-                    response = requests.post("http://127.0.0.1:8000/api/telemetry", json=data)
+                    response = requests.post("https://transformer-api-oj68.onrender.com", json=data)
                     print(f"[{tx['id']}] Data sent | Status: {data['status']} | Temp: {data['oil_temp_c']}°C")
                 except requests.exceptions.ConnectionError:
                     print(f"[{tx['id']}] Failed to connect. Is the FastAPI server running?")
